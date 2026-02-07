@@ -23,6 +23,48 @@
         --thead-bg:#f1f5f9; --row-bg:#fff; --row-alt-bg:#f8fafc; --row-hover-bg:#eef2ff;
         --table-border:#e5e7eb; --chip-bg:rgba(0,0,0,.05);
       }
+
+      .profiles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 250px);
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .profile-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 250px;
+          margin: 20px;
+      }
+
+      .profile-pic {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          object-fit: cover; /* Ensures the image covers the area without distortion */
+          border: 3px solid #ddd; /* Adds a border around the circle */
+          margin-bottom: 10px; /* Spacing between the image and text */
+      }
+
+      .profile-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: black;
+      }
+
+      .profile-affiliation {
+        font-size: 0.9rem;
+        color: grey;
+      }
+
+      .profile-role {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #6FAED9;
+      }
     </style>
 	</head>
 	<body class="is-preload">
@@ -34,7 +76,8 @@
 						<ul>
 							<li><a href="#about" class="active">About</a></li>
 							<li><a href="#schedule">Schedule</a></li>
-							<li><a href="#participants">Participants</a></li>
+              <li><a href="#participants">Participants</a></li>
+							<li><a href="#organizers">Organizers</a></li>
 						</ul>
 					</nav>
 
@@ -66,105 +109,113 @@
 								<h2>Schedule</h2>
 							</header>
               <table>
-              <tr>
+              <thead>
                 <th style="width: 15%;">Day</th>
                 <th style="width: 15%;">Time</th>
                 <th style="width: 40%;">Event</th>
                 <th style="width: 30%;">Remarks</th>
-              </tr>
-              <tr>
-                <th rowspan="14">March 2, 2026</th>
-                <td>09:30 -- 09:50</td>
-                <td>Registration</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>09:50 -- 10:00</td>
-                <td>Kickoff</td>
-              </tr>
-              <tr>
-                <td>10:00 -- 10:30</td>
-                <td>Lightning talk 1 (Public health)</td>
-                <td>Speaker: To be announced</td>
-              </tr>
-              <tr>
-                <td>10:30 -- 11:00</td>
-                <td>Lightning talk 2 (Artificial Intelligence)</td>
-                <td>Speaker: To be announced</td>
-              </tr>
-              <tr>
-                <td>11:00 -- 11:30</td>
-                <td>Lightning talk 3 (Public health)</td>
-                <td>Speaker: To be announced</td>
-              </tr>
-              <tr>
-                <td>11:30 -- 12:00</td>
-                <td>Lightning talk 4 (Artificial Intelligence)</td>
-                <td>Speaker: To be announced</td>
-              </tr>
-              <tr>
-                <td>12:00 -- 14:00</td>
-                <td>Working Lunch</td>
-                <td>Catered</td>
-              </tr>
-              <tr>
-                <td>14:00 -- 14:30</td>
-                <td>Lightning talk 5 (Public health)</td>
-                <td>Speaker: To be announced</td>
-              </tr>
-              <tr>
-                <td>14:30 -- 15:00</td>
-                <td>Lightning talk 6 (Artificial Intelligence)</td>
-                <td>Speaker: To be announced</td>
-              </tr>
-              <tr>
-                <td>15:00 -- 15:30</td>
-                <td>Lightning talk 7 (Public health)</td>
-                <td>Speaker: To be announced</td>
-              </tr>
-              <tr>
-                <td>15:30 -- 16:00</td>
-                <td>Lightning talk 8 (Artificial Intelligence)</td>
-                <td>Speaker: To be announced</td>
-              </tr>
-              <tr>
-                <td>16:00 -- 17:30</td>
-                <td>Open-ended discussion</td>
-              </tr>
-              <tr>
-                <td>17:30 -- 18:00</td>
-                <td>Transit to dinner location</td>
-              </tr>
-              <tr>
-                <td>18:00 -- 20:00</td>
-                <td>Working Dinner</td>
-                <td>Location to be announced</td>
-              </tr>
-              <tr>
-                <th rowspan="14">March 3, 2026</th>
-                <td>09:30 -- 10:30</td>
-                <td>Open-ended discussion</td>
-                <td>Submit pitch ideas to Davin</td>
-              </tr>
-              <tr>
-                <td>10:30 -- 11:00</td>
-                <td>Pitch session 1</td>
-                <td rowspan="3">Simple slides or just verbal descriptions are fine. The goal is to gather feedback and rally interested parties to work on the problems after the workshop</td>
-              </tr>
-              <tr>
-                <td>11:00 -- 11:30</td>
-                <td>Pitch session 2</td>
-              </tr>
-              <tr>
-                <td>11:30 -- 12:00</td>
-                <td>Pitch session 3</td>
-              </tr>
-              <tr>
-                <td>12:00 -- 14:00</td>
-                <td>Working Lunch</td>
-                <td>Catered</td>
-              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th rowspan="14" style="background-color: #a9effc;">March 2, 2026</th>
+                  <td>09:30 -- 09:50</td>
+                  <td>Registration</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>09:50 -- 10:00</td>
+                  <td>Kickoff</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10:00 -- 10:30</td>
+                  <td>Lightning talk 1 (Public health)</td>
+                  <td>Speaker: To be announced</td>
+                </tr>
+                <tr>
+                  <td>10:30 -- 11:00</td>
+                  <td>Lightning talk 2 (Artificial Intelligence)</td>
+                  <td>Speaker: To be announced</td>
+                </tr>
+                <tr>
+                  <td>11:00 -- 11:30</td>
+                  <td>Lightning talk 3 (Public health)</td>
+                  <td>Speaker: To be announced</td>
+                </tr>
+                <tr>
+                  <td>11:30 -- 12:00</td>
+                  <td>Lightning talk 4 (Artificial Intelligence)</td>
+                  <td>Speaker: To be announced</td>
+                </tr>
+                <tr>
+                  <td>12:00 -- 14:00</td>
+                  <td>Working Lunch</td>
+                  <td>Catered</td>
+                </tr>
+                <tr>
+                  <td>14:00 -- 14:30</td>
+                  <td>Lightning talk 5 (Public health)</td>
+                  <td>Speaker: To be announced</td>
+                </tr>
+                <tr>
+                  <td>14:30 -- 15:00</td>
+                  <td>Lightning talk 6 (Artificial Intelligence)</td>
+                  <td>Speaker: To be announced</td>
+                </tr>
+                <tr>
+                  <td>15:00 -- 15:30</td>
+                  <td>Lightning talk 7 (Public health)</td>
+                  <td>Speaker: To be announced</td>
+                </tr>
+                <tr>
+                  <td>15:30 -- 16:00</td>
+                  <td>Lightning talk 8 (Artificial Intelligence)</td>
+                  <td>Speaker: To be announced</td>
+                </tr>
+                <tr>
+                  <td>16:00 -- 17:30</td>
+                  <td>Open-ended discussion</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>17:30 -- 18:00</td>
+                  <td>Transit to dinner location</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>18:00 -- 20:00</td>
+                  <td>Working Dinner</td>
+                  <td>Location to be announced</td>
+                </tr>
+                <tr>
+                  <th rowspan="14" style="background-color: #a9effc;">March 3, 2026</th>
+                  <td>09:30 -- 10:30</td>
+                  <td>Open-ended discussion</td>
+                  <td>Submit pitch ideas to Davin</td>
+                </tr>
+                <tr>
+                  <td>10:30 -- 11:00</td>
+                  <td>Pitch session 1</td>
+                  <td>To be updated</td>
+                </tr>
+                <tr>
+                  <td>11:00 -- 11:30</td>
+                  <td>Pitch session 2</td>
+                  <td>To be updated</td>
+                </tr>
+                <tr>
+                  <td>11:30 -- 12:00</td>
+                  <td>Pitch session 3</td>
+                  <td>To be updated</td>
+                </tr>
+                <tr>
+                  <td>12:00 -- 14:00</td>
+                  <td>Working Lunch</td>
+                  <td>Catered</td>
+                </tr>
+              </tbody>
               </table>
+            For the pitch sessions, simple slides or just verbal descriptions are fine. The goal is to gather feedback and rally interested parties to work on the problems after the workshop :)
 						</section>
 
             <!-- Participants -->
@@ -172,7 +223,93 @@
               <header class="major">
                 <h2>Participants</h2>
               </header>
-              To be updated.
+              <p>To be updated as more people confirm attendance.</p>
+
+
+              <!-- "Default" image to use if cannot find image online -->
+              <!--
+              <svg class="profile-pic">
+                <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+              </svg>
+              -->
+
+              <div class="profiles">
+                <div class="profile-container">
+                  <img src="pics/cheryl johnson.jpeg" alt="Profile Photo" class="profile-pic">
+                  <div class="profile-name"><a href="https://www.linkedin.com/in/ccasejohnson/">Cheryl Johnson</a></div>
+                  <div class="profile-affiliation">World Health Organization</div>
+                  <div class="profile-role">Speaker</div>
+                </div>
+
+                <div class="profile-container">
+                  <img src="pics/alastair van heerden.jpeg" alt="Profile Photo" class="profile-pic">
+                  <div class="profile-name"><a href="https://www.linkedin.com/in/vanheerdena/">Alastair van Heerden</a></div>
+                  <div class="profile-affiliation">University of Witwatersrand<br>Wits Health Consortium</div>
+                  <div class="profile-role">Speaker</div>
+                </div>
+
+                <div class="profile-container">
+                  <img src="pics/jeff imai-eaton.avif" alt="Profile Photo" class="profile-pic">
+                  <div class="profile-name"><a href="https://hsph.harvard.edu/profile/jeff-imai-eaton/">Jeff Imai-Eaton</a></div>
+                  <div class="profile-affiliation">Harvard T.H. Chan School of Public Health</div>
+                  <div class="profile-role">Speaker</div>
+                </div>
+
+                <div class="profile-container">
+                  <img src="pics/ben brockman.jpeg" alt="Profile Photo" class="profile-pic" style="object-position: 0% -20%;">
+                  <div class="profile-name"><a href="https://www.linkedin.com/in/ben-brockman/">Ben Brockman</a></div>
+                  <div class="profile-affiliation">Clinton Health Access Initiative (CHAI)</div>
+                  <div class="profile-role">Speaker</div>
+                </div>
+
+                <div class="profile-container">
+                  <img src="pics/amulya yadav.jpg" alt="Profile Photo" class="profile-pic" style="object-position: 0% 0%;">
+                  <div class="profile-name"><a href="http://amulyayadav.com/">Amulya Yadav</a></div>
+                  <div class="profile-affiliation">Pennsylvania State University</div>
+                  <div class="profile-role">Speaker</div>
+                </div>
+
+                <div class="profile-container">
+                  <img src="pics/aditya prakash.png" alt="Profile Photo" class="profile-pic" style="object-position: 0% -20%;">
+                  <div class="profile-name"><a href="https://cse.gatech.edu/people/b-aditya-prakash">Aditya Prakash</a></div>
+                  <div class="profile-affiliation">Georgia Institute of Technology</div>
+                </div>
+
+                <div class="profile-container">
+                  <svg class="profile-pic" viewBox="0 0 94 100">
+                    <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                    <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+                  </svg>
+                  <p class="profile-name">Participant name and affilition</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Organizers -->
+            <section id="organizers" class="main special">
+              <header class="major">
+                <h2>Organizers</h2>
+              </header>
+              <div class="profiles">
+                <div class="profile-container">
+                  <img src="pics/milind tambe.jpg" alt="Profile Photo" class="profile-pic">
+                  <div class="profile-name"><a href="https://teamcore.seas.harvard.edu/tambe/">Milind Tambe</a></div>
+                  <div class="profile-affiliation">Harvard University</div>
+                </div>
+
+                <div class="profile-container">
+                  <img src="pics/davin choo.jpg" alt="Profile Photo" class="profile-pic">
+                  <div class="profile-name"><a href="https://davinchoo.com/">Davin Choo</a></div>
+                  <div class="profile-affiliation">Harvard University</div>
+                </div>
+
+                <div class="profile-container">
+                  <img src="pics/lingkai kong.webp" alt="Profile Photo" class="profile-pic">
+                  <div class="profile-name"><a href="https://lingkai-kong.com/">Lingkai Kong</a></div>
+                  <div class="profile-affiliation">Harvard University</div>
+                </div>
+              </div>
             </section>
 
 		<!-- Scripts -->
