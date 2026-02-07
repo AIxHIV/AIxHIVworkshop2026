@@ -24,6 +24,14 @@
         --table-border:#e5e7eb; --chip-bg:rgba(0,0,0,.05);
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
+      tr[id^="talk"] {
+        scroll-margin-top: 70px;
+      }
+
       .profiles {
         display: grid;
         grid-template-columns: repeat(auto-fit, 250px);
@@ -65,6 +73,23 @@
         font-weight: 400;
         color: #6FAED9;
       }
+
+      .talk-title {
+        margin: 0 0 0.5em 0;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+
+      .talk-abstract {
+        margin: 0 0 1rem 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .speaker-bio {
+        margin: 0;
+        font-size: 0.9rem;
+      }
     </style>
 	</head>
 	<body class="is-preload">
@@ -76,6 +101,7 @@
 						<ul>
 							<li><a href="#about" class="active">About</a></li>
 							<li><a href="#schedule">Schedule</a></li>
+              <li><a href="#speakers">Speakers</a></li>
               <li><a href="#participants">Participants</a></li>
 							<li><a href="#organizers">Organizers</a></li>
 						</ul>
@@ -111,8 +137,8 @@
               <table>
               <thead>
                 <th style="width: 15%;">Day</th>
-                <th style="width: 15%;">Time</th>
-                <th style="width: 40%;">Activity</th>
+                <th style="width: 20%;">Time (Eastern Time)</th>
+                <th style="width: 35%;">Activity</th>
                 <th style="width: 30%;">Additional details</th>
               </thead>
               <tbody>
@@ -130,22 +156,22 @@
                 <tr>
                   <td>10:00 -- 10:30</td>
                   <td>Short talk 1 (Public Health)</td>
-                  <td>Speaker: To be announced</td>
+                  <td><a href="#talk1">Speaker: To be announced</a></td>
                 </tr>
                 <tr>
                   <td>10:30 -- 11:00</td>
                   <td>Short talk 2 (Artificial Intelligence)</td>
-                  <td>Speaker: To be announced</td>
+                  <td><a href="#talk2">Speaker: To be announced</a></td>
                 </tr>
                 <tr>
                   <td>11:00 -- 11:30</td>
                   <td>Short talk 3 (Public Health)</td>
-                  <td>Speaker: To be announced</td>
+                  <td><a href="#talk3">Speaker: To be announced</a></td>
                 </tr>
                 <tr>
                   <td>11:30 -- 12:00</td>
                   <td>Short talk 4 (Artificial Intelligence)</td>
-                  <td>Speaker: To be announced</td>
+                  <td><a href="#talk4">Speaker: To be announced</a></td>
                 </tr>
                 <tr>
                   <td>12:00 -- 14:00</td>
@@ -155,22 +181,22 @@
                 <tr>
                   <td>14:00 -- 14:30</td>
                   <td>Short talk 5 (Public Health)</td>
-                  <td>Speaker: To be announced</td>
+                  <td><a href="#talk5">Speaker: To be announced</a></td>
                 </tr>
                 <tr>
                   <td>14:30 -- 15:00</td>
                   <td>Short talk 6 (Artificial Intelligence)</td>
-                  <td>Speaker: To be announced</td>
+                  <td><a href="#talk6">Speaker: To be announced</a></td>
                 </tr>
                 <tr>
                   <td>15:00 -- 15:30</td>
                   <td>Short talk 7 (Public Health)</td>
-                  <td>Speaker: To be announced</td>
+                  <td><a href="#talk7">Speaker: To be announced</a></td>
                 </tr>
                 <tr>
                   <td>15:30 -- 16:00</td>
                   <td>Short talk 8 (Artificial Intelligence)</td>
-                  <td>Speaker: To be announced</td>
+                  <td><a href="#talk8">Speaker: To be announced</a></td>
                 </tr>
                 <tr>
                   <td>16:00 -- 17:30</td>
@@ -217,6 +243,171 @@
               </table>
             For the pitch sessions, simple slides or just verbal descriptions are fine. The goal is to gather feedback and rally interested parties to work on the problems after the workshop :)
 						</section>
+
+            <!-- Speakers -->
+            <section id="speakers" class="main special">
+              <header class="major">
+                <h2>Speakers</h2>
+              </header>
+              <p>To be updated.</p>
+
+              <table>
+                <tbody>
+                  <tr id="talk1">
+                    <td style="width: 20%;">
+                      <!-- <img src="pics/speaker.jpg" alt="Speaker Name" class="profile-pic"> -->
+                      <svg class="profile-pic" style="width: 100px; height: 100px;">
+                        <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                        <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+                      </svg>
+                      <div>Short Talk 1 (Public Health)<br>March 2, 2026<br>10:00 -- 10:30</div>
+                    </td>
+                    <td style="width: 80%; text-align: left;">
+                      <h3 class="talk-title">Talk Title.</h3>
+                      <p class="talk-abstract">
+                      Talk abstract.
+                      </p>
+                      <p class="speaker-bio">
+                      Speaker bio.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr id="talk2">
+                    <td style="width: 20%;">
+                      <!-- <img src="pics/speaker.jpg" alt="Speaker Name" class="profile-pic"> -->
+                      <svg class="profile-pic" style="width: 100px; height: 100px;">
+                        <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                        <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+                      </svg>
+                      <div>Short Talk 2 (Artificial Intelligence)<br>March 2, 2026<br>10:30 -- 11:00</div>
+                    </td>
+                    <td style="width: 80%; text-align: left;">
+                      <h3 class="talk-title">Talk Title.</h3>
+                      <p class="talk-abstract">
+                      Talk abstract.
+                      </p>
+                      <p class="speaker-bio">
+                      Speaker bio.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr id="talk3">
+                    <td style="width: 20%;">
+                      <!-- <img src="pics/speaker.jpg" alt="Speaker Name" class="profile-pic"> -->
+                      <svg class="profile-pic" style="width: 100px; height: 100px;">
+                        <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                        <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+                      </svg>
+                      <div>Short Talk 3 (Public Health)<br>March 2, 2026<br>11:00 -- 11:30</div>
+                    </td>
+                    <td style="width: 80%; text-align: left;">
+                      <h3 class="talk-title">Talk Title.</h3>
+                      <p class="talk-abstract">
+                      Talk abstract.
+                      </p>
+                      <p class="speaker-bio">
+                      Speaker bio.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr id="talk4">
+                    <td style="width: 20%;">
+                      <!-- <img src="pics/speaker.jpg" alt="Speaker Name" class="profile-pic"> -->
+                      <svg class="profile-pic" style="width: 100px; height: 100px;">
+                        <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                        <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+                      </svg>
+                      <div>Short Talk 4 (Artificial Intelligence)<br>March 2, 2026<br>11:30 -- 12:00</div>
+                    </td>
+                    <td style="width: 80%; text-align: left;">
+                      <h3 class="talk-title">Talk Title.</h3>
+                      <p class="talk-abstract">
+                      Talk abstract.
+                      </p>
+                      <p class="speaker-bio">
+                      Speaker bio.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr id="talk5">
+                    <td style="width: 20%;">
+                      <!-- <img src="pics/speaker.jpg" alt="Speaker Name" class="profile-pic"> -->
+                      <svg class="profile-pic" style="width: 100px; height: 100px;">
+                        <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                        <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+                      </svg>
+                      <div>Short Talk 5 (Public Health)<br>March 2, 2026<br>14:00 -- 14:30</div>
+                    </td>
+                    <td style="width: 80%; text-align: left;">
+                      <h3 class="talk-title">Talk Title.</h3>
+                      <p class="talk-abstract">
+                      Talk abstract.
+                      </p>
+                      <p class="speaker-bio">
+                      Speaker bio.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr id="talk6">
+                    <td style="width: 20%;">
+                      <!-- <img src="pics/speaker.jpg" alt="Speaker Name" class="profile-pic"> -->
+                      <svg class="profile-pic" style="width: 100px; height: 100px;">
+                        <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                        <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+                      </svg>
+                      <div>Short Talk 6 (Artificial Intelligence)<br>March 2, 2026<br>14:30 -- 15:00</div>
+                    </td>
+                    <td style="width: 80%; text-align: left;">
+                      <h3 class="talk-title">Talk Title.</h3>
+                      <p class="talk-abstract">
+                      Talk abstract.
+                      </p>
+                      <p class="speaker-bio">
+                      Speaker bio.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr id="talk7">
+                    <td style="width: 20%;">
+                      <!-- <img src="pics/speaker.jpg" alt="Speaker Name" class="profile-pic"> -->
+                      <svg class="profile-pic" style="width: 100px; height: 100px;">
+                        <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                        <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+                      </svg>
+                      <div>Short Talk 7 (Public Health)<br>March 2, 2026<br>15:00 -- 15:30</div>
+                    </td>
+                    <td style="width: 80%; text-align: left;">
+                      <h3 class="talk-title">Talk Title.</h3>
+                      <p class="talk-abstract">
+                      Talk abstract.
+                      </p>
+                      <p class="speaker-bio">
+                      Speaker bio.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr id="talk8">
+                    <td style="width: 20%;">
+                      <!-- <img src="pics/speaker.jpg" alt="Speaker Name" class="profile-pic"> -->
+                      <svg class="profile-pic" style="width: 100px; height: 100px;">
+                        <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
+                        <circle cx="47" cy="30" r="20" fill="#34b4eb" />
+                      </svg>
+                      <div>Short Talk 8 (Artificial Intelligence)<br>March 2, 2026<br>15:30 -- 16:00</div>
+                    </td>
+                    <td style="width: 80%; text-align: left;">
+                      <h3 class="talk-title">Talk Title.</h3>
+                      <p class="talk-abstract">
+                      Talk abstract.
+                      </p>
+                      <p class="speaker-bio">
+                      Speaker bio.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
 
             <!-- Participants -->
             <section id="participants" class="main special">

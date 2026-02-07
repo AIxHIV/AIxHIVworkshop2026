@@ -2760,6 +2760,7 @@ input, select, textarea {
 		}
 
 		table tbody {
+			border-top: solid 2px;
 			border-bottom: solid 2px;
 		}
 
