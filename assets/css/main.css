@@ -2759,6 +2759,10 @@ input, select, textarea {
 			border-bottom: solid 2px;
 		}
 
+		table tbody {
+			border-bottom: solid 2px;
+		}
+
 		table tfoot {
 			border-top: solid 2px;
 		}
