@@ -29,10 +29,10 @@
       }
 
       .profiles {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 250px);
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 20px;
       }
 
       .profile-container {
@@ -41,7 +41,6 @@
           align-items: center;
           text-align: center;
           width: 250px;
-          margin: 20px;
       }
 
       .profile-pic {
@@ -97,7 +96,7 @@
 						<ul>
 							<li><a href="#about" class="active">About</a></li>
 							<li><a href="#schedule">Schedule</a></li>
-              <li><a href="#speakers">Speakers</a></li>
+              <li><a href="#talks">Talks</a></li>
               <li><a href="#participants">Participants</a></li>
 							<li><a href="#organizers">Organizers</a></li>
 						</ul>
@@ -240,10 +239,10 @@
             For the pitch sessions, simple slides or just verbal descriptions are fine. The goal is to gather feedback and rally interested parties to work on the problems after the workshop :)
 						</section>
 
-            <!-- Speakers -->
-            <section id="speakers" class="main special">
+            <!-- Talks -->
+            <section id="talks" class="main special">
               <header class="major">
-                <h2>Speakers</h2>
+                <h2>Talks</h2>
               </header>
               <p>To be updated.</p>
 
@@ -482,9 +481,21 @@
                 </div>
 
                 <div class="profile-container">
+                  <img src="pics/yonatan grad.jpeg" alt="Profile Photo" class="profile-pic" style="object-position: 0% 0%;">
+                  <div class="profile-name"><a href="https://hsph.harvard.edu/profile/yonatan-grad/">Yonatan Grad</a></div>
+                  <div class="profile-affiliation">Harvard T.H. Chan School of Public Health</div>
+                </div>
+
+                <div class="profile-container">
                   <img src="pics/ruanne barnabas.png" alt="Profile Photo" class="profile-pic">
                   <div class="profile-name"><a href="https://mghbwhid.hms.harvard.edu/faculty/barnabas/">Ruanne Barnabas</a></div>
                   <div class="profile-affiliation">Massachusetts General Hospital</div>
+                </div>
+
+                <div class="profile-container">
+                  <img src="pics/tanima arora.jpeg" alt="Profile Photo" class="profile-pic">
+                  <div class="profile-name"><a href="https://dme.childrenshospital.org/graduate-medical-education/trainings-programs/harvard-neonatal-perinatal-medicine-fellowship-training-program-overview/current-fellows/">Tanima Arora</a></div>
+                  <div class="profile-affiliation">Boston Children's Hospital</div>
                 </div>
 
                 <div class="profile-container">
@@ -512,6 +523,13 @@
                 </div>
 
                 <div class="profile-container">
+                  <img src="pics/anagha satish.webp" alt="Profile Photo" class="profile-pic">
+                  <div class="profile-name"><a href="https://anagha-satish.github.io/">Anagha Satish</a></div>
+                  <div class="profile-affiliation">Harvard University</div>
+                </div>
+
+                <!--
+                <div class="profile-container">
                   <svg class="profile-pic" viewBox="0 0 94 100">
                     <polygon points="22,80 42,35 52,35 72,80" fill="#a3b3b8" />
                     <circle cx="47" cy="30" r="20" fill="#34b4eb" />
@@ -519,6 +537,7 @@
                   <div class="profile-name">Name</div>
                   <div class="profile-affiliation">Affiliation</div>
                 </div>
+                -->
               </div>
             </section>
 
